@@ -16,5 +16,6 @@ steps:
     SecretsFilter: '$(secretname)'
   name: FetchSecrets
 
-  inlineScript:
+- script: |
     echo "##vso[task.setvariable variable=dbPassword;issecret=true]$(dbpass)"
+  displayName: 'Set Secret Variable'
