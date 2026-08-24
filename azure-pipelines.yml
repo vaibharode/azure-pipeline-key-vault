@@ -19,3 +19,5 @@ steps:
 - script: |
     echo "##vso[task.setvariable variable=dbPassword;issecret=true]$(dbpass)"
   displayName: 'Set Secret Variable'
+  env:
+      DB_PASSWORD: $(dbpass)
